@@ -1,0 +1,510 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto mono', monospace;
+}
+
+body {
+    background: #000;
+    color: #8A8A93;
+    line-height: 1.6;
+    width: 1120px;
+    margin: auto;
+}
+
+/* Global Styling Start */
+section {
+    padding: 10px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #8A8A93;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 600;
+    color: #8A8A93;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #8A8A93;
+}
+
+h1 span,
+h2 span {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 14px;
+}
+
+/* Buttons */
+.button {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: 0px;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+.button:hover {
+    background: #b11116;
+    color: #ffffff;
+}
+
+.card-button {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    background: #fff;
+    color: #b11116;
+    border-radius: 10px;
+    padding: 15px 45px;
+    border: 0px;
+    margin-top: 20px;
+    transition: 0.5s;
+    border: 3px solid #ffffff;
+}
+.card-button:hover {
+    background: #b11116;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+}
+/* Global Styling End */
+
+/* Header Styling Start */
+header {
+    padding: 10px;
+}
+.header-area {
+    display: flex;
+    justify-content: space-between;
+    background: #111;
+    padding: 20px;
+    border-radius: 30px;
+}
+.logo {
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    line-height: 18px;
+}
+nav {
+    display: flex;
+    gap: 30px;
+}
+nav a {
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #8A8A93;
+    transition: 0.5s;
+    line-height: 18px;
+}
+nav a:hover {
+    color: #fff;
+}
+/* Header Styling End */
+
+/* Hero Section Styling Start */
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.box {
+    background: #111;
+    border-radius: 30px;
+}
+.box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: end;
+    grid-column: span 2;
+    grid-row: span 1;
+    padding: 20px;
+    gap: 10px;
+}
+.box3 {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: end;
+    grid-column: span 1;
+    grid-row: span 2;
+    padding: 20px;
+    gap: 10px;
+}
+.box2,
+.box4,
+.box5,
+.box6 {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    grid-row: span 1;
+    grid-column: span 1;
+    aspect-ratio: 1 / 1;
+    border-radius: 30px;
+    background: #111;
+}
+/* Hero Section Styling End */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: end;
+    background: #111;
+    padding: 20px;
+    border-radius: 30px;
+}
+.projects > div:nth-of-type(1),
+.projects > div:nth-of-type(6) {
+    grid-row: span 1;
+    grid-column: span 2;
+    aspect-ratio: 2 / 1;
+}
+.projects > div:nth-of-type(2),
+.projects > div:nth-of-type(3),
+.projects > div:nth-of-type(4),
+.projects > div:nth-of-type(5) {
+    grid-row: span 2;
+    grid-column: span 1;
+    aspect-ratio: 1 / 2;
+}
+.project-item h3 {
+    width: 100%;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 10px;
+    background: #000;
+    border-radius: 10px;
+}
+
+.client-name {
+    margin-top: 10px;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #fff;
+}
+.client-title {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #8A8A93;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.review-item {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: end;
+    background: #111;
+    padding: 20px;
+    border-radius: 30px;
+}
+.reviews > div:nth-of-type(1),
+.reviews > div:nth-of-type(6) {
+    grid-row: span 1;
+    grid-column: span 2;
+    aspect-ratio: 2 / 1;
+}
+.reviews > div:nth-of-type(2),
+.reviews > div:nth-of-type(3),
+.reviews > div:nth-of-type(4),
+.reviews > div:nth-of-type(5) {
+    grid-row: span 2;
+    grid-column: span 1;
+    aspect-ratio: 1 / 2;
+}
+
+.cta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.cta-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-row: span 1;
+    grid-column: span 4;
+    aspect-ratio: 4 / 1;
+    background: #b11116;
+    border-radius: 30px;
+}
+.cta-heading {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+footer {
+    padding: 10px;
+}
+.footer-area {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #111;
+    border-radius: 30px;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.article {
+    background: #111;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: baseline;
+    gap: 20px;
+    aspect-ratio: 1 / 1;
+    padding: 10px;
+    transition: 0.5s;
+}
+.article img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.article h3 {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 600;
+    text-align: start;
+    padding: 0px 10px;
+    text-transform: uppercase;
+}
+.article-head {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: end;
+    background: #111;
+    border-radius: 30px;
+    grid-column: span 2;
+    grid-row: span 1;
+    padding: 20px;
+    gap: 10px;
+}
+.article:hover h3 {
+    color: #fff;
+    transition: 0.5s;
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN START */
+/* ============================= */
+
+/* Tablet (max width: 991px) */
+@media (max-width: 991px) {
+    body{
+        width: 100%;
+    }
+
+    /* All grid sections → 3 columns */
+    .hero-grid,
+    .projects,
+    .reviews,
+    .articles,
+    .cta {
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Adjust span items for better fit */
+    .projects > div:nth-of-type(1),
+    .projects > div:nth-of-type(6),
+    .reviews > div:nth-of-type(1),
+    .reviews > div:nth-of-type(6) {
+        grid-column: span 2;
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+    }
+
+    .projects > div:nth-of-type(2),
+    .projects > div:nth-of-type(3),
+    .projects > div:nth-of-type(4),
+    .projects > div:nth-of-type(5),
+    .reviews > div:nth-of-type(2),
+    .reviews > div:nth-of-type(3),
+    .reviews > div:nth-of-type(4),
+    .reviews > div:nth-of-type(5) {
+        grid-row: span 2;
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+    }
+
+    .article-head {
+        grid-column: span 2;
+    }
+    .box3{
+        grid-row: span 1 !important;
+        grid-column: span 3 !important;
+        order: 6;
+        aspect-ratio: 3/1;
+    }
+    p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .client-review{
+        height: 200px;
+        overflow: hidden;
+    }
+}
+
+/* Mobile (max width: 767px) */
+@media (max-width: 767px) {
+    body {
+        width: 100%;
+    }
+    p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    nav{
+        display: none;
+    }
+    .projects > * {
+        grid-row: span 1 !important;
+        grid-column: span 2 !important;
+        aspect-ratio: 2 / 1;
+    }
+    .reviews > * {
+        grid-column: span 2 !important;
+        aspect-ratio: 2 / 1;
+    }
+    .projects > div:nth-of-type(2),
+    .projects > div:nth-of-type(5),
+    .reviews > div:nth-of-type(2),
+    .reviews > div:nth-of-type(5) {
+        grid-row: span 1 !important;
+        aspect-ratio: 2 / 1;
+    }
+
+    .projects > div:nth-of-type(3),
+    .projects > div:nth-of-type(4),
+    .reviews > div:nth-of-type(3),
+    .reviews > div:nth-of-type(4) {
+        grid-column: span 1 !important;
+        aspect-ratio: 1 / 2;
+    }
+
+
+    .client-review{
+        max-height: 100px;
+        overflow: hidden;
+    }
+    
+
+    /* All grid sections → 2 column */
+    .projects,
+    .reviews{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+     /* All grid sections → 1 column */
+    .hero-grid,
+    .articles,
+    .cta {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .box1{
+        grid-column: span 2 !important;
+        aspect-ratio: 2 / 1;
+    }
+    .box3{
+        grid-row: span 2 !important;
+        grid-column: span 2 !important;
+        order: 6;
+        aspect-ratio: 1/1;
+    }
+    
+
+
+
+
+    /* Remove spans for stacked layout */
+    
+    
+    .article-head {
+        grid-column: span 2 !important;
+        grid-row: span 1 !important;
+        aspect-ratio: 2 / 1;
+    }
+    .cta-area{
+        grid-row: span 2;
+        grid-column: span 2;
+        aspect-ratio: 1 / 1;
+    }
+
+    /* Make buttons full width */
+    .button,
+    .card-button {
+        padding: 10px 20px;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 15px;
+    }
+    a{
+        font-size: 15px;
+    }
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN END */
+/* ============================= */
