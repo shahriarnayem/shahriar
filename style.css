@@ -508,3 +508,142 @@ footer {
 /* ============================= */
 /* RESPONSIVE DESIGN END */
 /* ============================= */
+
+
+/* ================= BASE ================= */
+:root {
+  --bg: #0D0D0D;
+  --card: rgba(255,255,255,0.04);
+
+  --primary: #FF6201;
+  --secondary: #6C5CE7;
+  --accent: #00D1B2;
+  --highlight: #FF3D71;
+
+  --gradient-main: linear-gradient(135deg, #FF6201, #FF3D71);
+  --gradient-soft: linear-gradient(135deg, rgba(108,92,231,0.15), rgba(0,209,178,0.15));
+}
+
+body {
+    background: var(--bg);
+    color: #aaa;
+}
+
+/* ================= GLOBAL ================= */
+.box,
+.project-item,
+.review-item,
+.article,
+.header-area,
+.footer-area {
+    background: var(--card) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle gradient overlay */
+.box::before,
+.project-item::before,
+.review-item::before,
+.article::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-soft);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.box:hover::before,
+.project-item:hover::before,
+.review-item:hover::before,
+.article:hover::before {
+    opacity: 1;
+}
+
+/* hover glow */
+.box:hover,
+.project-item:hover,
+.review-item:hover,
+.article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 35px rgba(255,98,1,0.25);
+}
+
+/* ================= TEXT ================= */
+h1 span,
+h2 span {
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* ================= BUTTON ================= */
+.button {
+    background: var(--gradient-main);
+    color: #fff;
+}
+
+.button:hover {
+    box-shadow: 0 0 20px rgba(255,98,1,0.4);
+}
+
+/* ================= HEADER ================= */
+.header-area {
+    background: rgba(255,255,255,0.03);
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+/* ================= HERO IMAGES ================= */
+.box2,
+.box4,
+.box5,
+.box6 {
+    transition: 0.4s;
+}
+
+.box2:hover,
+.box4:hover,
+.box5:hover,
+.box6:hover {
+    transform: scale(1.05);
+}
+
+/* ================= PROJECT ================= */
+.project-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,98,1,0.3), rgba(108,92,231,0.3));
+    opacity: 0;
+}
+
+.project-item:hover::after {
+    opacity: 1;
+}
+
+/* ================= REVIEW ================= */
+.review-item {
+    border-left: 3px solid var(--accent);
+}
+
+/* ================= CTA ================= */
+.cta-area {
+    background: var(--gradient-main);
+    box-shadow: 0 20px 60px rgba(255,98,1,0.4);
+}
+
+/* ================= ARTICLE ================= */
+.article:hover h3 {
+    color: #fff;
+}
+
+/* ================= FOOTER ================= */
+.footer-area {
+    background: rgba(255,255,255,0.03);
+}
