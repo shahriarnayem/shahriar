@@ -1,0 +1,273 @@
+/* ================= FONT ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Neue Machina", "Roboto Mono", monospace;
+}
+
+/* ================= THEME ================= */
+:root {
+    --bg: #f6f6f7;
+    --card: #ffffff;
+    --text: #111111;
+    --subtext: #7a7a85;
+    --border: #e6e6eb;
+}
+
+body.dark {
+    --bg: #0b0b0f;
+    --card: #121217;
+    --text: #ffffff;
+    --subtext: #9a9aa3;
+    --border: rgba(255,255,255,0.08);
+}
+
+/* ================= BODY ================= */
+body {
+    background: var(--bg);
+    color: var(--subtext);
+    line-height: 1.6;
+    width: 1120px;
+    margin: auto;
+    transition: 0.3s ease;
+}
+
+/* ================= GLOBAL ================= */
+section {
+    padding: 10px;
+}
+
+h1, h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--text);
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+p {
+    font-size: 14px;
+    color: var(--subtext);
+}
+
+/* ================= BUTTON ================= */
+.button {
+    font-size: 14px;
+    font-weight: 600;
+    background: transparent;
+    color: var(--text);
+    border-radius: 8px;
+    padding: 10px 18px;
+    border: 1px solid var(--border);
+    margin-top: 15px;
+    transition: 0.25s;
+}
+
+.button:hover {
+    background: var(--text);
+    color: var(--bg);
+}
+
+/* CTA BUTTON */
+.card-button {
+    background: var(--text);
+    color: var(--bg);
+    border-radius: 10px;
+    padding: 14px 40px;
+    border: none;
+}
+
+.card-button:hover {
+    opacity: 0.85;
+}
+
+/* ================= HEADER ================= */
+.header-area {
+    display: flex;
+    justify-content: space-between;
+    background: var(--card);
+    padding: 18px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+}
+
+.logo {
+    font-weight: 600;
+    color: var(--text);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--subtext);
+    transition: 0.25s;
+}
+
+nav a:hover {
+    color: var(--text);
+}
+
+/* ================= GRID ================= */
+.hero-grid,
+.projects,
+.reviews,
+.articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* ================= CARD ================= */
+.box,
+.project-item,
+.review-item,
+.article,
+.footer-area {
+    background: var(--card);
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    transition: 0.25s;
+}
+
+.box:hover,
+.project-item:hover,
+.review-item:hover,
+.article:hover {
+    transform: translateY(-4px);
+}
+
+/* ================= HERO ================= */
+.box1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    grid-column: span 2;
+    padding: 20px;
+}
+
+.box3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    grid-row: span 2;
+    padding: 20px;
+}
+
+/* ================= IMAGE ================= */
+.box2,
+.box4,
+.box5,
+.box6 {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* ================= PROJECT ================= */
+.project-item {
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-item h3 {
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+/* ================= REVIEW ================= */
+.review-item {
+    padding: 20px;
+}
+
+.client-name {
+    margin-top: 10px;
+    color: var(--text);
+}
+
+.client-title {
+    font-size: 12px;
+    color: var(--subtext);
+}
+
+/* ================= CTA ================= */
+.cta-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--text);
+    color: var(--bg);
+    border-radius: 20px;
+    padding: 40px;
+}
+
+/* ================= ARTICLE ================= */
+.article {
+    padding: 10px;
+}
+
+.article img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.article h3 {
+    font-size: 14px;
+}
+
+/* ================= FOOTER ================= */
+.footer-area {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* ================= TOGGLE ================= */
+.theme-toggle {
+    cursor: pointer;
+    border: 1px solid var(--border);
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991px) {
+    body {
+        width: 100%;
+    }
+
+    .hero-grid,
+    .projects,
+    .reviews,
+    .articles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    nav {
+        display: none;
+    }
+
+    .hero-grid,
+    .projects,
+    .reviews,
+    .articles {
+        grid-template-columns: 1fr;
+    }
+}
